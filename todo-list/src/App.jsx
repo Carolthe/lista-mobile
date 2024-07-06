@@ -1,11 +1,13 @@
 
 import './App.css'
-import Home from './Home'
+import Header from './Header'
+import Primary from './Primary'
 
 function App() {
   return (
     <div>
-      <Home />
+      <Header />
+      <Primary />
     </div>
   )
 }

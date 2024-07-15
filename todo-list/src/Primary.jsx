@@ -1,4 +1,3 @@
-import Tasks from "./components/Tasks"
 import Notas from "./img/Notas.png"
 
 export default function Primary (){
@@ -14,6 +13,7 @@ export default function Primary (){
             <p className="text-gray-300 inline-block sm:text-base text-sm font-bold">Você ainda não tem tarefas cadastradas</p>
             <p className="text-gray-300  inline-block sm:text-base text-sm ml-2">Crie tarefas e organize seus itens a fazer</p>
         </div>
+        
     </div>
     )
 }

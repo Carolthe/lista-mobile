@@ -6,6 +6,8 @@ export default function Primary (){
         <div className="flex justify-center mt-32">
             <hr className="sm:w-screen sm:max-w-3xl w-80 border-gray-400"/>
         </div>
+
+        
         <div className="flex justify-center mt-24">    
             <img className="sm:w-14 sm:h-14 w-10 h-10" src={Notas} alt="Notas"></img>
         </div>
@@ -13,7 +15,6 @@ export default function Primary (){
             <p className="text-gray-300 inline-block sm:text-base text-sm font-bold">Você ainda não tem tarefas cadastradas</p>
             <p className="text-gray-300  inline-block sm:text-base text-sm ml-2">Crie tarefas e organize seus itens a fazer</p>
         </div>
-        
     </div>
     )
 }

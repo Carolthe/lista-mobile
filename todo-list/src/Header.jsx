@@ -10,6 +10,11 @@ export default function Header (){
     function adicionarTasks (){
         setAdicionarInputs([...adicionarInputs, input])
     }
+    let teskSalva = {
+        concluida: false,
+        nomeTarefa: (input)
+    }
+    localStorage.setItem ("salvar", JSON.stringify(teskSalva))
 
     return(
         <div className="flex flex-col justify-center items-center bg-gray-700 h-48 w-full ">

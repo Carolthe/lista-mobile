@@ -1,20 +1,22 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Logo from "./img/Logo.png"
 import Tasks from "./components/Tasks"
+import Primary from "./Primary"
 
 export default function Header (){
 
     const [input, setInput] = useState ("")
-    const [adicionarInputs, setAdicionarInputs] = useState ([])
+    const [adicionarInputs, setAdicionarInputs] = useState (JSON.parse(localStorage.getItem('tasks') || '[]'))
 
     function adicionarTasks (){
         setAdicionarInputs([...adicionarInputs, input])
     }
-    let teskSalva = {
-        concluida: false,
-        nomeTarefa: (input)
-    }
-    localStorage.setItem ("salvar", JSON.stringify(teskSalva))
+    useEffect(()=>{
+        localStorage.setItem ("tasks", JSON.stringify(adicionarInputs))
+    },[adicionarInputs])
+
+    
+    
 
     return(
         <div className="flex flex-col justify-center items-center bg-gray-700 h-48 w-full ">
@@ -42,9 +44,13 @@ export default function Header (){
         </div>
         <div>
             {
-               adicionarInputs.map((taskDoInput, i)=> <Tasks teste={taskDoInput} key={`${taskDoInput} ${i}`}/> )
+               adicionarInputs.map ((taskDoInput, i)=> <Tasks teste={taskDoInput} key={`${taskDoInput} ${i}`}/> )
             }
         </div>
+            {/* { adicionarInputs.length === 0 && (
+        <Primary />
+   )} */}
+   <Primary tarefasVazias={adicionarInputs} />
     </div>
     )
 }

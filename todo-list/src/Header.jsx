@@ -15,14 +15,12 @@ export default function Header (){
         localStorage.setItem ("tasks", JSON.stringify(adicionarInputs))
     },[adicionarInputs])
 
-    
-    
-
     return(
         <div className="flex flex-col justify-center items-center bg-gray-700 h-48 w-full ">
-             <img className="w-28 mt-44" src={Logo} alt="logo" />
-             <div className="mt-16 flex justify-center ">
-                <input className="w-64 h-10 px-6 rounded-lg bg-gray-400 shadow-2xl text-white sm:w-screen max-w-2xl sm:h-12 "
+           <div></div>
+             <img className="w-28 mt-96" src={Logo} alt="logo" />
+             <div className="mt-16">
+                <input className="w-64 px-6 rounded-lg bg-gray-400 shadow-2xl text-white h-10 sm:w-screen max-w-2xl sm:h-12 "
                 placeholder="Adicione uma nova tarefa"
                 type="text"
                 value={input}
@@ -47,10 +45,9 @@ export default function Header (){
                adicionarInputs.map ((taskDoInput, i)=> <Tasks teste={taskDoInput} key={`${taskDoInput} ${i}`}/> )
             }
         </div>
-            {/* { adicionarInputs.length === 0 && (
+            { adicionarInputs.length === 0 && (
         <Primary />
-   )} */}
-   <Primary tarefasVazias={adicionarInputs} />
+   )}
     </div>
     )
 }

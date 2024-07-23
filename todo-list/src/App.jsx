@@ -6,7 +6,8 @@ import Primary from './Primary'
 function App() {
   return (
     <div>
-      <Header />
+      <Header
+ />
       
     </div>
   )

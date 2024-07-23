@@ -24,6 +24,7 @@ export default function Header (){
                 placeholder="Adicione uma nova tarefa"
                 type="text"
                 value={input}
+                maxLength={18}
                 onChange={(ev)=>setInput (ev.target.value)}
                 />
                 <button className=" ml-2 h-10 w-12 rounded-lg bg-sky text-white shadow-2xl sm:h-12 sm:w-16"
@@ -36,10 +37,15 @@ export default function Header (){
             <div>
                 <div className="flex">
                     <h4 className="text-purple text-sm font-bold " >Concluídas</h4> 
-             <button className="bg-gray-400 text-white ml-3 w-6 rounded-full">0</button>                   
-                </div>
-            </div>
-        </div>
+             <button className="bg-gray-400 text-white ml-3 w-6 rounded-full">0</button>        
+         
+                </div>       
+              
+           </div>
+        </div>  
+        <div>
+                  <hr className="sm:w-screen sm:max-w-3xl w-80 border-gray-400 mt-2"/>      
+          </div> 
         <div>  
             {
                adicionarInputs.map ((taskDoInput, i)=> <Tasks teste={taskDoInput} key={`${taskDoInput} ${i}`}/> )

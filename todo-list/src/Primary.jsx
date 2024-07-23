@@ -4,7 +4,7 @@ export default function Primary (){
     return(
     <div>
         <div className="flex justify-center mt-2">
-            <hr className="sm:w-screen sm:max-w-3xl w-80 border-gray-400"/>
+           
         </div>
         <div className="flex justify-center mt-24">    
             <img className="sm:w-14 sm:h-14 w-10 h-10" src={Notas} alt="Notas"></img>

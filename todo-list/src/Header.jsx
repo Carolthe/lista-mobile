@@ -13,7 +13,12 @@ export default function Header (){
     }
     useEffect(()=>{
         localStorage.setItem ("tasks", JSON.stringify(adicionarInputs))
+       
     },[adicionarInputs])
+
+    function removerTask (){
+         localStorage.removeItem("tasks")
+    }
 
     return(
         <div className="flex flex-col justify-center items-center w-full ">

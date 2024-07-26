@@ -16,8 +16,10 @@ export default function Header (){
        
     },[adicionarInputs])
 
-    function removerTask (){
+    function removerTask (task){
          localStorage.removeItem("tasks")
+         console.log(task)
+         
     }
 
     return(
@@ -53,7 +55,8 @@ export default function Header (){
           </div> 
         <div>  
             {
-               adicionarInputs.map ((taskDoInput, i)=> <Tasks teste={taskDoInput} key={`${taskDoInput} ${i}`}/> )
+               adicionarInputs.map ((taskDoInput, i)=> <Tasks removeItem={removerTask} teste={taskDoInput} key={`${taskDoInput} ${i}`}/> )
+               
             }
         </div>
         

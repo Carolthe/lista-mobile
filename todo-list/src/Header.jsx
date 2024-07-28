@@ -18,9 +18,13 @@ export default function Header (){
 
     function removerTask (task){
          localStorage.removeItem("tasks")
-         console.log(task)
-         
     }
+
+    // function excluirInputTarefa (taskDoInput){
+    //     setInput((prevList) => prevList.filter((lista) => lista != taskDoInput));
+    // }
+
+
 
     return(
         <div className="flex flex-col justify-center items-center w-full ">

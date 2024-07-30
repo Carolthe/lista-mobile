@@ -7,7 +7,8 @@ export default function Tasks (props){
         <button type="checkbox"
         className="bg-gray-500 border-2 border-gray-300 w-4 h-4 rounded-full  "></button>
         <p className="text-white px-4 w-full ">{props.teste}</p>
-       <button onClick={()=> props.removeItem (props.teste)}> remover</button>
+       <button onClick={()=> props.removeItem (props.teste)}
+        > remover</button>
     </div>
 </div>
     )

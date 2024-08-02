@@ -16,8 +16,11 @@ export default function Header (){
        
     },[adicionarInputs])
 
-    function removerTask (task){
+    function removerTask (){
+         
          localStorage.removeItem("tasks")
+         setAdicionarInputs((prevList) => prevList.filter((task) => task.taskDoInput != taskDoInput))
+
     }
 
     // function excluirInputTarefa (taskDoInput){
@@ -57,7 +60,7 @@ export default function Header (){
         <div>
                   <hr className="sm:w-screen sm:max-w-3xl w-80 border-gray-400 mt-2"/>      
           </div> 
-        <div>  
+        <div >  
             {
                adicionarInputs.map ((taskDoInput, i)=> <Tasks removeItem={removerTask} teste={taskDoInput} key={`${taskDoInput} ${i}`}/> )
                

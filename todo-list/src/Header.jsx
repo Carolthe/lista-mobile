@@ -36,7 +36,7 @@ export default function Header (){
                 maxLength={25}
                 onChange={(ev)=>setInput (ev.target.value)}
                 />
-                <button className=" ml-2 h-10 w-12 rounded-lg bg-sky text-white shadow-2xl sm:h-12 sm:w-16"
+                <button className=" ml-2 h-10 w-12 rounded-lg bg-sky hover:bg-claro text-white shadow-2xl sm:h-12 sm:w-16"
                  onClick={adicionarTasks}
                 > Criar  </button>
             </div>

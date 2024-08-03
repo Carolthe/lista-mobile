@@ -13,6 +13,7 @@ export default {
         'gray-300': '#808080',
         'blue': '#1E6F9F',
         'sky': '#4EA8DE',
+        'claro':'#7dd3fc',
         'purple': '#8284FA'
       }
     },

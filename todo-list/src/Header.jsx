@@ -13,21 +13,16 @@ export default function Header (){
     }
     useEffect(()=>{
         localStorage.setItem ("tasks", JSON.stringify(adicionarInputs))
+        console.log(adicionarInputs)
        
     },[adicionarInputs])
 
-    function removerTask (){
+    function removerTask (taskDoInput){
          
-         localStorage.removeItem("tasks")
-         setAdicionarInputs((prevList) => prevList.filter((task) => task.taskDoInput != taskDoInput))
-
+        //  localStorage.removeItem("tasks")
+         setAdicionarInputs((prevList) => prevList.filter((task) => task != taskDoInput))
+         console.log("aksdfk")
     }
-
-    // function excluirInputTarefa (taskDoInput){
-    //     setInput((prevList) => prevList.filter((lista) => lista != taskDoInput));
-    // }
-
-
 
     return(
         <div className="flex flex-col justify-center items-center w-full ">
@@ -62,7 +57,7 @@ export default function Header (){
           </div> 
         <div >  
             {
-               adicionarInputs.map ((taskDoInput, i)=> <Tasks removeItem={removerTask} teste={taskDoInput} key={`${taskDoInput} ${i}`}/> )
+               adicionarInputs.map ((taskDoInput, i)=> <Tasks removerItem={removerTask} teste={taskDoInput} key={`${taskDoInput} ${i}`}/> )
                
             }
         </div>

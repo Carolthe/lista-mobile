@@ -33,7 +33,7 @@ export default function Header (){
                 placeholder="Adicione uma nova tarefa"
                 type="text"
                 value={input}
-                maxLength={18}
+                maxLength={25}
                 onChange={(ev)=>setInput (ev.target.value)}
                 />
                 <button className=" ml-2 h-10 w-12 rounded-lg bg-sky text-white shadow-2xl sm:h-12 sm:w-16"

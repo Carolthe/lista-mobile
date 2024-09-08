@@ -9,14 +9,21 @@ export default function Header (){
     const [adicionarInputs, setAdicionarInputs] = useState (JSON.parse(localStorage.getItem('tasks') || '[]'))
 
     function adicionarTasks (){
+        if (input.trim()){
         setAdicionarInputs([...adicionarInputs, input])
-    }
+  setInput("")  
+}else{
+    alert('Por favor, insira uma tarefa válida.')
+}
+}
+
     useEffect(()=>{
         localStorage.setItem ("tasks", JSON.stringify(adicionarInputs))
         console.log(adicionarInputs)
        
     },[adicionarInputs])
 
+    
     function removerTask (taskDoInput){
          
         //  localStorage.removeItem("tasks")
@@ -26,7 +33,6 @@ export default function Header (){
 
     return(
         <div className="flex flex-col justify-center items-center w-full ">
-           <div></div>
              <img className="w-36 mt-16" src={Logo} alt="logo" />
              <div className="mt-16">
                 <input className="w-64 px-6 rounded-lg bg-gray-400 shadow-2xl text-white h-10 sm:w-screen max-w-2xl sm:h-12 "
@@ -46,7 +52,7 @@ export default function Header (){
             <div>
                 <div className="flex">
                     <h4 className="text-purple text-sm font-bold " >Concluídas</h4> 
-             <button className="bg-gray-400 text-white ml-3 w-6 rounded-full">0</button>        
+             <button className="bg-gray-400 text-white ml-3 w-6 rounded-full">{}</button>        
          
                 </div>       
               

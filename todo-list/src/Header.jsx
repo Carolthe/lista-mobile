@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Logo from "./img/Logo.png"
 import Tasks from "./components/Tasks"
-import Primary from "./Primary"
+import Primary from "./components/Primary"
 
 export default function Header (){
 
@@ -61,7 +61,7 @@ export default function Header (){
         <div>
                   <hr className="sm:w-screen sm:max-w-3xl w-80 border-gray-400 mt-2"/>      
           </div> 
-        <div >  
+        <div  className="mb-32">  
             {
                adicionarInputs.map ((taskDoInput, i)=> <Tasks removerItem={removerTask} teste={taskDoInput} key={`${taskDoInput} ${i}`}/> )
                

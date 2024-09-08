@@ -1,4 +1,4 @@
-import Notas from "./img/Notas.png"
+import Notas from "../img/Notas.png"
 
 export default function Primary (){
     return(
